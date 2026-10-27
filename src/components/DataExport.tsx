@@ -1,8 +1,10 @@
+import { useLanguage } from '../i18n/LanguageContext';
 import { useState } from 'react';
 import { Download, Loader2 } from 'lucide-react';
 import { supabase, getSupabaseUrl } from '../supabase/client';
 
 export function DataExport() {
+  const { t } = useLanguage();
   const [exporting, setExporting] = useState(false);
   const [format, setFormat] = useState<'json' | 'csv'>('json');
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
@@ -29,7 +31,7 @@ export function DataExport() {
       const result = await response.json();
 
       if (!response.ok || !result.success) {
-        throw new Error(result.error || '导出失败');
+        throw new Error(result.error || t('导出失败'));
       }
 
       // 下载文件
@@ -45,9 +47,9 @@ export function DataExport() {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      setMessage({ type: 'success', text: `成功导出 ${result.count} 条数据` });
+      setMessage({ type: 'success', text: t('成功导出 {count} 条数据').replace('{count}', String(result.count)) });
     } catch (error) {
-      const text = error instanceof Error ? error.message : '导出失败';
+      const text = error instanceof Error ? error.message : t('导出失败');
       setMessage({ type: 'error', text });
     } finally {
       setExporting(false);
@@ -57,7 +59,7 @@ export function DataExport() {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-4">
-        <label className="text-sm font-medium">导出格式:</label>
+        <label className="text-sm font-medium">{t('导出格式:')}</label>
         <select
           value={format}
           onChange={(e) => setFormat(e.target.value as 'json' | 'csv')}
@@ -75,14 +77,10 @@ export function DataExport() {
       >
         {exporting ? (
           <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            导出中...
-          </>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />{t('导出中...')}</>
         ) : (
           <>
-            <Download className="mr-2 h-4 w-4" />
-            导出数据
-          </>
+            <Download className="mr-2 h-4 w-4" />{t('导出数据')}</>
         )}
       </button>
 

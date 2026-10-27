@@ -1,3 +1,4 @@
+import { useLanguage } from '../i18n/LanguageContext';
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -30,6 +31,7 @@ const testimonialImages = [
 ];
 
 function Testimonials() {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -109,9 +111,7 @@ function Testimonials() {
           className="text-center mb-16"
         >
           <p className="text-xs tracking-[0.2em] text-stone-500 uppercase mb-4">Testimonials</p>
-          <h2 className="text-4xl md:text-5xl font-medium text-[#0e7cc5]">
-            来自学员的声音
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-medium text-[#0e7cc5]">{t('来自学员的声音')}</h2>
         </motion.div>
 
         {/* 卡片堆叠区域 */}
@@ -167,7 +167,7 @@ function Testimonials() {
                     >
                       <img
                         src={item.image}
-                        alt={`学员 ${item.id}`}
+                        alt={`${t('学员')} ${item.id}`}
                         className="w-full h-full object-cover"
                         style={{
                           filter: style.isMain ? 'none' : 'blur(6px)',

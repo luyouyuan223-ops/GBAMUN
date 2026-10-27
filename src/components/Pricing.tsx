@@ -1,8 +1,9 @@
+import { useLanguage, useLocalizedContent } from '../i18n/LanguageContext';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Sparkles } from 'lucide-react';
 
-const plans = [
+const plansContent = [
   {
     name: '基础探索',
     price: '9,800',
@@ -30,6 +31,8 @@ const plans = [
 ];
 
 function Pricing() {
+  const plans = useLocalizedContent(plansContent);
+  const { t } = useLanguage();
   return (
     <section className="relative py-32 bg-slate-950">
       {/* Background Pattern */}
@@ -46,12 +49,8 @@ function Pricing() {
           className="text-center mb-20"
         >
           <p className="text-sm tracking-[0.3em] text-blue-400 uppercase mb-4">Pricing</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            选择适合您的研学方案
-          </h2>
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            我们提供多种行程选择，满足不同年龄段和学习需求
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t('选择适合您的研学方案')}</h2>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">{t('我们提供多种行程选择，满足不同年龄段和学习需求')}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -70,9 +69,7 @@ function Pricing() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-6 py-1.5 bg-blue-600 text-white text-xs tracking-widest uppercase rounded-full flex items-center gap-2">
-                  <Sparkles className="w-3 h-3" />
-                  推荐
-                </div>
+                  <Sparkles className="w-3 h-3" />{t('推荐')}</div>
               )}
 
               <div className="mb-8">
@@ -110,9 +107,7 @@ function Pricing() {
                     ? 'bg-blue-600 text-white hover:bg-blue-500'
                     : 'bg-slate-800 text-white hover:bg-slate-700'
                 }`}
-              >
-                立即预订
-              </button>
+              >{t('立即预订')}</button>
             </motion.div>
           ))}
         </div>

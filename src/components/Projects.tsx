@@ -1,9 +1,10 @@
+import { useLanguage, useLocalizedContent } from '../i18n/LanguageContext';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
-const projects = [
+const projectsContent = [
   {
     id: 'global-leadership',
     title: '联合国青年发展项目',
@@ -34,6 +35,8 @@ const projects = [
 ];
 
 function Projects() {
+  const projects = useLocalizedContent(projectsContent);
+  const { t } = useLanguage();
   const navigate = useNavigate();
 
   const handleProjectClick = (projectId: string) => {
@@ -54,14 +57,8 @@ function Projects() {
         >
           <p className="text-xs tracking-[0.2em] text-stone-500 uppercase mb-4">Programs</p>
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-            <h2 className="text-4xl md:text-5xl font-medium text-[#0e7cc5] leading-tight">
-              专为卓越青年
-              <br />
-              打造国际化研学项目
-            </h2>
-            <p className="text-stone-600 max-w-md leading-relaxed">
-              为青少年打开通往世界的大门，在探索中成长，在实践中蜕变
-            </p>
+            <h2 className="text-4xl md:text-5xl font-medium text-[#0e7cc5] leading-tight">{t('专为卓越青年')}<br />{t('打造国际化研学项目')}</h2>
+            <p className="text-stone-600 max-w-md leading-relaxed">{t('为青少年打开通往世界的大门，在探索中成长，在实践中蜕变')}</p>
           </div>
         </motion.div>
 
@@ -102,7 +99,7 @@ function Projects() {
                   <div className="flex items-center justify-between pt-4 border-t border-stone-100">
                     <span className="text-sm text-stone-400">{project.duration}</span>
                     <div className="flex items-center gap-2 text-stone-900 group-hover:text-stone-700 transition-colors">
-                      <span className="text-sm font-medium">了解详情</span>
+                      <span className="text-sm font-medium">{t('了解详情')}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>

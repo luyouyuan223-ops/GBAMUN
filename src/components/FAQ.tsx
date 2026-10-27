@@ -1,8 +1,9 @@
+import { useLanguage, useLocalizedContent } from '../i18n/LanguageContext';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 
-const faqs = [
+const faqsContent = [
   {
     question: '研学课程适合什么年龄段孩子？',
     answer: '我们的研学课程主要面向13岁以上的青少年，根据不同年龄段设计了不同的行程线路和活动难度。我们推荐13岁以上英语能力较为良好的可以参加联合国青年发展项目'
@@ -29,7 +30,7 @@ const faqs = [
   }
 ];
 
-function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
+function FAQItem({ faq, index }: { faq: typeof faqsContent[0]; index: number }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -75,6 +76,8 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 }
 
 function FAQ() {
+  const faqs = useLocalizedContent(faqsContent);
+  const { t } = useLanguage();
   return (
     <section className="py-24 bg-stone-50">
       <div className="max-w-4xl mx-auto px-6">
@@ -86,12 +89,8 @@ function FAQ() {
           className="text-center mb-16"
         >
           <p className="text-xs tracking-[0.2em] text-stone-500 uppercase mb-4">FAQ</p>
-          <h2 className="text-4xl font-medium text-[#0e7cc5] mb-4">
-            常见问题
-          </h2>
-          <p className="text-lg text-stone-500">
-            关于研学课程的常见疑问解答
-          </p>
+          <h2 className="text-4xl font-medium text-[#0e7cc5] mb-4">{t('常见问题')}</h2>
+          <p className="text-lg text-stone-500">{t('关于研学课程的常见疑问解答')}</p>
         </motion.div>
         <div className="bg-white rounded-2xl p-8 shadow-sm">
           {faqs.map((faq, index) => (

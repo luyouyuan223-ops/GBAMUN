@@ -1,7 +1,9 @@
+import { useLanguage } from '../i18n/LanguageContext';
 import React from 'react';
 import { motion } from 'framer-motion';
 
 function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="relative text-white overflow-hidden bg-[#0e7cc5]">
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-16">
@@ -12,9 +14,7 @@ function Footer() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <p className="text-white/90 text-sm leading-relaxed max-w-md mx-auto mb-8">
-            为下一代青年领袖启蒙国际视野和领导力，致力于为全球青少年提供卓越的研学教育体验。
-          </p>
+          <p className="text-white/90 text-sm leading-relaxed max-w-md mx-auto mb-8">{t('为下一代青年领袖启蒙国际视野和领导力，致力于为全球青少年提供卓越的研学教育体验。')}</p>
         </motion.div>
 
         <motion.div

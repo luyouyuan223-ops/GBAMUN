@@ -1,3 +1,5 @@
+import LanguageSwitch from '../components/LanguageSwitch';
+import { useLanguage, useLocalizedContent } from '../i18n/LanguageContext';
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -7,7 +9,7 @@ import {
   X, ChevronLeft, ChevronRight
 } from 'lucide-react';
 
-const projectsData = {
+const projectsDataContent = {
   'global-leadership': {
     title: '联合国青年发展项目',
     subtitle: 'UN Youth Development Program',
@@ -350,6 +352,8 @@ const projectsData = {
 };
 
 function ProjectDetail() {
+  const projectsData = useLocalizedContent(projectsDataContent);
+  const { t } = useLanguage();
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
   const project = projectId ? projectsData[projectId as keyof typeof projectsData] : null;
@@ -396,13 +400,11 @@ function ProjectDetail() {
     return (
       <div className="min-h-screen bg-stone-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl text-stone-900 mb-4">项目未找到</h1>
+          <h1 className="text-2xl text-stone-900 mb-4">{t('项目未找到')}</h1>
           <button 
             onClick={() => navigate('/')}
             className="text-stone-600 hover:text-stone-900"
-          >
-            返回首页
-          </button>
+          >{t('返回首页')}</button>
         </div>
       </div>
     );
@@ -412,14 +414,15 @@ function ProjectDetail() {
     <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
           <button 
             onClick={() => navigate('/')}
             className="flex items-center gap-2 text-stone-600 hover:text-stone-900 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            <span>返回首页</span>
+            <span>{t('返回首页')}</span>
           </button>
+          <LanguageSwitch />
         </div>
       </nav>
 
@@ -469,7 +472,7 @@ function ProjectDetail() {
             >
               <Clock className="w-6 h-6 text-stone-600 mb-3" />
               <div className="text-stone-900 font-semibold text-lg">{project.duration}</div>
-              <div className="text-stone-500 text-sm">行程时长</div>
+              <div className="text-stone-500 text-sm">{t('行程时长')}</div>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -480,7 +483,7 @@ function ProjectDetail() {
             >
               <MapPin className="w-6 h-6 text-stone-600 mb-3" />
               <div className="text-stone-900 font-semibold text-lg">{project.location}</div>
-              <div className="text-stone-500 text-sm">目的地</div>
+              <div className="text-stone-500 text-sm">{t('目的地')}</div>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -491,7 +494,7 @@ function ProjectDetail() {
             >
               <Users className="w-6 h-6 text-stone-600 mb-3" />
               <div className="text-stone-900 font-semibold text-lg">{project.ageRange}</div>
-              <div className="text-stone-500 text-sm">适合年龄</div>
+              <div className="text-stone-500 text-sm">{t('适合年龄')}</div>
             </motion.div>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -502,7 +505,7 @@ function ProjectDetail() {
             >
               <Calendar className="w-6 h-6 text-stone-600 mb-3" />
               <div className="text-stone-900 font-semibold text-lg">{project.departure}</div>
-              <div className="text-stone-500 text-sm">出发时间</div>
+              <div className="text-stone-500 text-sm">{t('出发时间')}</div>
             </motion.div>
           </div>
         </div>
@@ -516,7 +519,7 @@ function ProjectDetail() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">项目亮点</h2>
+            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">{t('项目亮点')}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {project.highlights.map((highlight, index) => (
                 <div
@@ -540,7 +543,7 @@ function ProjectDetail() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">行程安排</h2>
+            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">{t('行程安排')}</h2>
             <div className="space-y-6">
               {project.itinerary.map((day, index) => (
                 <motion.div
@@ -549,12 +552,12 @@ function ProjectDetail() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex gap-6 p-6 rounded-2xl bg-white border border-stone-200 shadow-sm"
+                  className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-6 rounded-2xl bg-white border border-stone-200 shadow-sm"
                 >
                   <div className="flex-shrink-0 w-20">
                     <span className="text-stone-600 font-medium">{day.day}</span>
                   </div>
-                  <div className="flex-grow w-full">
+                  <div className="flex-grow min-w-0 w-full">
                     <h3 className="text-stone-900 font-medium mb-2">{day.title}</h3>
                     <p className="text-stone-600 text-sm mb-2 w-full">{day.content}</p>
                     <div className="flex items-center gap-2 text-stone-400 text-xs">
@@ -577,7 +580,7 @@ function ProjectDetail() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">费用包含</h2>
+            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">{t('费用包含')}</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {project.includes.map((item, index) => (
                 <div
@@ -609,7 +612,7 @@ function ProjectDetail() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">精彩瞬间</h2>
+            <h2 className="text-2xl font-medium text-[#0e7cc5] mb-8 whitespace-nowrap">{t('精彩瞬间')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {project.gallery.slice(0, 3).map((image, index) => (
                 <motion.div
@@ -702,16 +705,16 @@ function ProjectDetail() {
             className="flex flex-col md:flex-row items-center justify-between gap-8 p-8 md:p-12 rounded-3xl bg-[#0e7cc5]"
           >
             <div>
-              <h2 className="text-3xl font-medium text-white mb-2">准备好开启研学之旅了吗？</h2>
-              <p className="text-white/80">名额有限，立即预约咨询</p>
+              <h2 className="text-3xl font-medium text-white mb-2">{t('准备好开启研学之旅了吗？')}</h2>
+              <p className="text-white/80">{t('名额有限，立即预约咨询')}</p>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
               <div className="text-left">
-                <p className="text-white/70 text-sm mb-1">项目费用</p>
-                <p className="text-3xl font-medium text-white">{project.price}<span className="text-lg text-white/70">/人</span></p>
+                <p className="text-white/70 text-sm mb-1">{t('项目费用')}</p>
+                <p className="text-3xl font-medium text-white">{project.price}<span className="text-lg text-white/70">{t('/人')}</span></p>
               </div>
               <div className="flex flex-col items-start gap-2">
-                <p className="text-white/70 text-xs">查阅完整项目行程</p>
+                <p className="text-white/70 text-xs">{t('查阅完整项目行程')}</p>
                 <div className="flex items-center gap-3">
                   {projectWithPdf.pdfUrl && (
                     <a
@@ -719,18 +722,14 @@ function ProjectDetail() {
                       download
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3 bg-white/20 text-white font-medium rounded-xl hover:bg-white/30 transition-colors flex items-center gap-2 whitespace-nowrap"
-                    >
-                      下载行程PDF
-                    </a>
+                      className="px-4 sm:px-6 py-3 bg-white/20 text-white font-medium rounded-xl hover:bg-white/30 transition-colors flex items-center gap-2 whitespace-nowrap"
+                    >{t('下载行程PDF')}</a>
                   )}
                   <Link
                     to="/"
                     onClick={() => setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 100)}
-                    className="px-6 py-3 bg-white text-[#0e7cc5] font-medium rounded-xl hover:bg-white/90 transition-colors flex items-center gap-2 whitespace-nowrap"
-                  >
-                    立即咨询
-                    <ArrowRight className="w-4 h-4" />
+                    className="px-4 sm:px-6 py-3 bg-white text-[#0e7cc5] font-medium rounded-xl hover:bg-white/90 transition-colors flex items-center gap-2 whitespace-nowrap"
+                  >{t('立即咨询')}<ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
