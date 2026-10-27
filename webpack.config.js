@@ -9,7 +9,8 @@ module.exports = (env, argv) => {
     entry: './src/index.tsx',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js'
+      filename: isDev ? 'bundle.js' : 'bundle.[contenthash:8].js',
+      clean: true
     },
     module: {
       rules: [
