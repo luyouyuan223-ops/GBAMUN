@@ -46,3 +46,19 @@ pnpm dev
 3. 上传 ZIP → 平台自动验证 → 创建新项目
 4. 点击「确认开启云服务」一键恢复数据库和云函数
 # GBAMUN
+
+
+## 自动构建与部署（GitHub Pages）
+
+工作流：`.github/workflows/deploy-pages.yml`。
+
+- 推送到 `main`：安装锁定的依赖，执行类型检查，构建并发布 `dist/`。
+- 提交到 `main` 的 Pull Request：只检查和构建，不发布。
+- 也可以在 Actions → Deploy website to GitHub Pages → Run workflow 手动重试。
+- 不需要添加部署密钥，工作流使用 GitHub 自带的短期令牌。
+
+首次启用：仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。若保留旧的 Deploy from a branch，源码会被当作静态网站直接发布，无法正确运行 React 应用。
+
+自定义域名保留为 `www.unydp.com`。使用 GitHub Pages 时，阿里云 DNS 中主机记录 `www` 的 CNAME 应指向 `luyouyuan223-ops.github.io`，不要同时指向 Sites。DNS 生效及证书签发后，在 Pages 设置中启用 Enforce HTTPS。根域名 `unydp.com` 的解析需单独配置。
+
+构建自动包含仓库中的 `assets/`、可选的 `public/` 和 `CNAME`。数据库迁移和 Supabase Edge Functions 仍需单独部署；此工作流只发布前端。
