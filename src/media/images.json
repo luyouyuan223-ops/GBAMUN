@@ -1,0 +1,546 @@
+{
+  "direction-climate.jpg": {
+    "width": 2630,
+    "height": 2630,
+    "variants": [
+      {
+        "src": "/media/optimized/direction-climate-480.c1e9c6d61c.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/direction-climate-960.be8f7eb9fc.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/direction-climate-1440.07fe114659.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "direction-model-un.jpg": {
+    "width": 2159,
+    "height": 2159,
+    "variants": [
+      {
+        "src": "/media/optimized/direction-model-un-480.8d2698d81d.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/direction-model-un-960.6a49085e89.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/direction-model-un-1440.e052f33a9d.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "faculty-alice.png": {
+    "width": 429,
+    "height": 483,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-alice-429.d651bc4217.webp",
+        "width": 429
+      }
+    ]
+  },
+  "faculty-claire.png": {
+    "width": 450,
+    "height": 477,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-claire-450.9f208f514b.webp",
+        "width": 450
+      }
+    ]
+  },
+  "faculty-jerome.png": {
+    "width": 387,
+    "height": 480,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-jerome-387.98b2f3a35f.webp",
+        "width": 387
+      }
+    ]
+  },
+  "faculty-julian.png": {
+    "width": 429,
+    "height": 483,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-julian-429.1f119405ff.webp",
+        "width": 429
+      }
+    ]
+  },
+  "faculty-lars.png": {
+    "width": 444,
+    "height": 479,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-lars-444.c8594df947.webp",
+        "width": 444
+      }
+    ]
+  },
+  "faculty-marie.png": {
+    "width": 471,
+    "height": 474,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-marie-471.25d832784a.webp",
+        "width": 471
+      }
+    ]
+  },
+  "faculty-rabih.png": {
+    "width": 407,
+    "height": 468,
+    "variants": [
+      {
+        "src": "/media/optimized/faculty-rabih-407.6f7f27d3f8.webp",
+        "width": 407
+      }
+    ]
+  },
+  "family-support.jpg": {
+    "width": 2400,
+    "height": 1600,
+    "variants": [
+      {
+        "src": "/media/optimized/family-support-480.b897c64188.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/family-support-960.270665ab74.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/family-support-1440.e50916b5ff.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "hero.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/hero-480.c35064d29f.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/hero-960.89883a7a2b.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/hero-1800.f677abff7f.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "portrait-lin-qianyu.jpg": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-lin-qianyu-480.d24a77cd00.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/portrait-lin-qianyu-960.57e18944e4.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/portrait-lin-qianyu-1440.7ee92fa182.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "portrait-liu-yiting.jpg": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-liu-yiting-480.aaa4252e99.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/portrait-liu-yiting-960.d50837517a.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/portrait-liu-yiting-1440.0ecf14eb4f.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "portrait-mai-lingyu.jpg": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-mai-lingyu-480.58def3cabd.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/portrait-mai-lingyu-960.09bc351fc2.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/portrait-mai-lingyu-1440.90a8ce229c.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "portrait-tan-zhuolin.jpg": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-tan-zhuolin-480.78068e55f5.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/portrait-tan-zhuolin-960.fb9f8c8f37.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/portrait-tan-zhuolin-1440.4b4fc28aa2.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "portrait-zhang-xinyue.jpg": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-zhang-xinyue-480.7b6c0cfc2c.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/portrait-zhang-xinyue-960.882d81a449.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/portrait-zhang-xinyue-1440.235367f844.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "portrait-zhao-hanya.jpg": {
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/media/optimized/portrait-zhao-hanya-480.a1530b8908.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/portrait-zhao-hanya-960.6963b85fa3.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/portrait-zhao-hanya-1440.a909b000eb.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "program-brussels.jpg": {
+    "width": 2000,
+    "height": 1484,
+    "variants": [
+      {
+        "src": "/media/optimized/program-brussels-480.f95b0e6457.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/program-brussels-960.78eb899ae4.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/program-brussels-1440.fa2a930727.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "program-hague.jpg": {
+    "width": 1478,
+    "height": 891,
+    "variants": [
+      {
+        "src": "/media/optimized/program-hague-480.e1b537ab6e.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/program-hague-960.f5238802f3.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/program-hague-1440.71791f8d9f.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-0.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-0-480.ae540cf207.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-0-960.252e6a8c56.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-0-1440.5af946ac01.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-17.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-17-480.c35064d29f.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-17-960.89883a7a2b.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-17-1440.77aabd20d6.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-18.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-18-480.e52f628f8c.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-18-960.470035b95a.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-18-1440.91ed097505.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-19.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-19-480.eadc7f1090.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-19-960.36035c0e75.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-19-1440.338b067670.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-20.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-20-480.94722b5313.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-20-960.82252b48fb.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-20-1440.0bd68e1f07.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-21.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-21-480.681c812af3.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-21-960.81b1031390.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-21-1440.d449b26aae.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-22.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-22-480.8aaa300771.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-22-960.a3317e339d.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-22-1440.0913f26738.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-24.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-24-480.16ddd9ddde.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-24-960.14b2306903.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-24-1440.77a96f10d2.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-25.jpg": {
+    "width": 1200,
+    "height": 900,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-25-480.90501bfa0b.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-25-960.977635d53d.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-25-1200.64eb169b3b.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "scene-42.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-42-480.75c85dbd5c.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-42-960.b9128872c7.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-42-1440.0bf3597d54.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-48.jpg": {
+    "width": 1600,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-48-480.1c5ca0e37d.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-48-960.efdcbc5507.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-48-1440.d07d1f98e0.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "scene-74.jpg": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/media/optimized/scene-74-480.c486171bb4.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/scene-74-960.f80daf027e.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/scene-74-1440.c598c191c5.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "student-2.jpg": {
+    "width": 720,
+    "height": 960,
+    "variants": [
+      {
+        "src": "/media/optimized/student-2-480.b43dad15f7.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/student-2-720.337f2a0e28.webp",
+        "width": 720
+      }
+    ]
+  },
+  "student-4.jpg": {
+    "width": 720,
+    "height": 960,
+    "variants": [
+      {
+        "src": "/media/optimized/student-4-480.074a78538c.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/student-4-720.56836833f9.webp",
+        "width": 720
+      }
+    ]
+  },
+  "student-5.jpg": {
+    "width": 720,
+    "height": 960,
+    "variants": [
+      {
+        "src": "/media/optimized/student-5-480.c14a247d8f.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/student-5-720.7f5367b178.webp",
+        "width": 720
+      }
+    ]
+  }
+}
