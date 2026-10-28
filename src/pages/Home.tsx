@@ -22,8 +22,16 @@ export default function Home(){
  const {language,toggleLanguage}=useLanguage();const en=language==='en';const b=(zh:string,english:string)=>en?english:zh;const p=(pair:Pair)=>en?pair[1]:pair[0];
  const [scrolled,setScrolled]=useState(false),[menu,setMenu]=useState(false),[filter,setFilter]=useState(-1),[panel,setPanel]=useState<Panel>(null),[faq,setFaq]=useState<number|null>(null),[storyIndex,setStoryIndex]=useState(0);
  const closeRef=useRef<HTMLButtonElement>(null);const previousFocus=useRef<HTMLElement|null>(null);
+ const [keyboardNavigation,setKeyboardNavigation]=useState(false);
+ useEffect(()=>{
+  const keyboard=(event:KeyboardEvent)=>{if(event.key==='Tab')setKeyboardNavigation(true)};
+  const pointer=()=>setKeyboardNavigation(false);
+  window.addEventListener('keydown',keyboard,true);
+  window.addEventListener('pointerdown',pointer,true);
+  return()=>{window.removeEventListener('keydown',keyboard,true);window.removeEventListener('pointerdown',pointer,true)};
+ },[]);
  useEffect(()=>{const tick=()=>setScrolled(window.scrollY>60);tick();window.addEventListener('scroll',tick,{passive:true});return()=>window.removeEventListener('scroll',tick)},[]);
- useEffect(()=>{if(!panel)return;previousFocus.current=document.activeElement as HTMLElement;const old=document.body.style.overflow;document.body.style.overflow='hidden';closeRef.current?.focus();const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setPanel(null);if(e.key==='Tab'){const dialog=document.querySelector('.pv-dialog');const nodes=dialog?.querySelectorAll<HTMLElement>('button,a[href],input,select,textarea,[tabindex="0"]');if(!nodes?.length)return;const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}};window.addEventListener('keydown',key);return()=>{document.body.style.overflow=old;window.removeEventListener('keydown',key);previousFocus.current?.focus()}},[panel]);
+ useEffect(()=>{if(!panel)return;previousFocus.current=document.activeElement as HTMLElement;const old=document.body.style.overflow;document.body.style.overflow='hidden';closeRef.current?.focus({preventScroll:true});const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setPanel(null);if(e.key==='Tab'){const dialog=document.querySelector('.pv-dialog');const nodes=dialog?.querySelectorAll<HTMLElement>('button,a[href],input,select,textarea,[tabindex="0"]');if(!nodes?.length)return;const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}};window.addEventListener('keydown',key);return()=>{document.body.style.overflow=old;window.removeEventListener('keydown',key);previousFocus.current?.focus({preventScroll:true})}},[panel]);
  const go=(id:string)=>{setMenu(false);document.getElementById(id)?.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})};
  const choose=(i:number)=>{setFilter(i);go('programs')};
  const cta=(label:string,action:()=>void,style='pv-button')=><button className={style} onClick={action}>{label}<ArrowUpRight size={17}/></button>;
@@ -36,7 +44,7 @@ export default function Home(){
  [b('项目费用包含机票、签证和餐饮吗？','Are flights, visas and meals included?'),b('各项目的费用范围不同，不能统一理解为全包。请逐项核对对应手册中的包含与不包含项目，并以最终服务协议为准。','Inclusions vary. Check flights, visas, meals and other costs against the specific handbook and final service agreement.')],
  [b('出行期间如何获得帮助？','How can participants get support?'),b('项目团队根据当期方案提供学习、出行和生活协调。行前将明确联络渠道、相关注意事项和遇到问题时的处理方式。未成年学员的安排需在咨询时进一步确认。','The team provides support according to the programme plan. Contact channels, travel guidance and assistance procedures are clarified before departure. Ask about arrangements for minors during consultation.')]
  ];
- return <div className="site-home" lang={en?'en':'zh-CN'}>
+ return <div className={`site-home${keyboardNavigation?' keyboard-navigation':''}`} lang={en?'en':'zh-CN'}>
  <a href="#about" className="pv-skip">{b('跳至主要内容','Skip to content')}</a>
  <header className={`pv-header ${scrolled||menu?'solid':''}`}><a className="brand-link" href="#" aria-label={b('返回首页','Home')}><Brand/></a><nav aria-label={b('主导航','Main navigation')} className={menu?'open':''}>{[['about',b('关于我们','About')],['directions',b('探索项目','Programmes')],['values',b('教育价值','Our approach')],['stories',b('成长故事','Stories')],['families',b('常见问题及解答','For families')]].map(([id,label])=><button key={id} onClick={()=>go(id)}>{label}</button>)}</nav><div className="nav-actions"><button className="language" onClick={toggleLanguage} aria-label={b('Switch to English','切换为中文')}><Globe size={14}/>{b('中文 / EN','EN / 中文')}</button><button className="nav-contact" onClick={()=>contact()}>{b('联系咨询','Enquire')}</button><button className="menu-toggle" aria-label={b('打开或关闭菜单','Toggle menu')} aria-expanded={menu} onClick={()=>setMenu(!menu)}>{menu?<X/>:<Menu/>}</button></div></header>
  <main>
