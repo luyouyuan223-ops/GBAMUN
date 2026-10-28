@@ -23,7 +23,7 @@ Thumbs.db
 .vscode/
 
 # Node.js / JavaScript / TypeScript
-node_modules/
+node_modules
 dist/
 build/
 .next/

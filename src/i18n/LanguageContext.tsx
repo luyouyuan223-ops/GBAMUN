@@ -44,8 +44,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.title = language === 'zh' ? 'GBAMUN—湾区模联' : 'GBAMUN — Greater Bay Area Model United Nations';
     const description = document.querySelector('meta[name="description"]');
     description?.setAttribute('content', language === 'zh'
-      ? 'GBAMUN湾区模联提供联合国青年发展项目、AFS青年大会、SDGs研学等国际交流项目，培养具备全球视野的未来领袖。专注研学教育，连接世界舞台。'
-      : 'Explore GBAMUN’s UN Youth Development Program, AFS Youth Assembly and SDGs field research journeys. Developing future leaders with a global outlook.');
+      ? 'GBAMUN湾区模联通过国际事务与青年发展、气候行动、模拟联合国等项目，为青年创造理解世界、独立思考与跨文化交流的机会。'
+      : 'Explore global affairs, youth development, climate action and Model United Nations with GBAMUN. Understand the world through inquiry, dialogue and cross-cultural exchange.');
     try {
       window.localStorage.setItem(storageKey, language);
     } catch {
