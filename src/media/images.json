@@ -542,5 +542,329 @@
         "width": 720
       }
     ]
+  },
+  "afs-assembly-01.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-01-480.27dfd94539.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-01-960.f90438159e.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-01-1440.91d300b053.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-02.jpg": {
+    "width": 1440,
+    "height": 1084,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-02-480.f2303d03eb.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-02-960.51a0c43d9b.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-02-1440.6ddc6ae906.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-03.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-03-480.e821814731.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-03-960.b192c470aa.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-03-1440.0800c6504b.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-04.jpg": {
+    "width": 1440,
+    "height": 960,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-04-480.ee1ac05173.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-04-960.a20c33965c.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-04-1440.ca3378e88c.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-05.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-05-480.fa96ec5fbf.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-05-960.febffd8036.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-05-1440.4a7c9c362e.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-06.jpg": {
+    "width": 1708,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-06-480.11b25baf71.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-06-960.ab5bfcea38.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-06-1440.19f2e0bbbb.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-07.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-07-480.a66aafe17d.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-07-960.7bd08c767c.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-07-1440.7d7077814d.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-08.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-08-480.68bae2fd02.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-08-960.c2bbda92ad.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-08-1440.3218260481.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-09.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-09-480.ce24c9abc5.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-09-960.2eef1d178b.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-09-1440.7415a1644b.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-10.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-10-480.b442a602bf.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-10-960.f8c9977a7b.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-10-1440.84f8b3de87.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "afs-assembly-11.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/afs-assembly-11-480.d7cfa3723b.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/afs-assembly-11-960.b9258c46ec.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/afs-assembly-11-1440.c88343844b.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "kenya-field-01.jpg": {
+    "width": 1279,
+    "height": 1706,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-01-480.3a3d6c9873.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-01-960.e6982f416b.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-01-1279.f7b9ae72fe.webp",
+        "width": 1279
+      }
+    ]
+  },
+  "kenya-field-02.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-02-480.d0689632c4.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-02-960.7c352b2536.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-02-1440.92a9e34c35.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "kenya-field-03.jpg": {
+    "width": 1440,
+    "height": 1080,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-03-480.de43e10240.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-03-960.e8f0ec8d53.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-03-1440.ba65cdc61d.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "kenya-field-04.jpg": {
+    "width": 1706,
+    "height": 1279,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-04-480.18c068622a.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-04-960.78a7ae16c2.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-04-1440.7ca497128e.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "kenya-field-05.jpg": {
+    "width": 1440,
+    "height": 810,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-05-480.953fe91a07.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-05-960.062e96d06e.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-05-1440.743e56787a.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "kenya-field-06.jpg": {
+    "width": 1706,
+    "height": 1279,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-06-480.ecbc2b3eb5.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-06-960.820ee0b587.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-06-1440.6a1ce0f5ac.webp",
+        "width": 1440
+      }
+    ]
+  },
+  "kenya-field-07.jpg": {
+    "width": 1279,
+    "height": 1706,
+    "variants": [
+      {
+        "src": "/media/optimized/kenya-field-07-480.c437ece147.webp",
+        "width": 480
+      },
+      {
+        "src": "/media/optimized/kenya-field-07-960.d0b6d0f246.webp",
+        "width": 960
+      },
+      {
+        "src": "/media/optimized/kenya-field-07-1279.6e2171ac14.webp",
+        "width": 1279
+      }
+    ]
   }
 }
