@@ -4,13 +4,18 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 type Journal = {
   title: string;
-  date: string;
+  date?: string;
   url: string;
-  cover: { src: string; width: number; height: number; alt: string };
+  cover: { src: string; width: number; height: number; alt: string; position?: string };
 };
 
 // Keep the original article titles when switching languages.
 const journals: Journal[] = [
+  {
+    title: '不囿成见，自见天地｜周靖怡的 UNYDP 研学游记',
+    url: 'https://mp.weixin.qq.com/s/lqrFHbbHVuaSn52fMlethg',
+    cover: { src: '/media/journal-zhou-jingyi.webp', width: 1440, height: 1920, alt: '周靖怡在马特洪峰前的心形观景装置中留影', position: '50% 60%' },
+  },
   {
     title: '行以求知，游以问道｜祝谭皓的 UNYDP 研学游记',
     date: '2026-10-14',
@@ -42,9 +47,9 @@ export default function StudentJournals() {
           {journals.map(journal => (
             <article className="journal-card" key={journal.url}>
               <a className="journal-link" href={journal.url} target="_blank" rel="noopener noreferrer" aria-label={`${journal.title} — ${en ? 'Read on WeChat (opens in a new tab)' : '阅读公众号原文（在新标签页打开）'}`}>
-                <div className="journal-cover"><img src={journal.cover.src} alt={journal.cover.alt} width={journal.cover.width} height={journal.cover.height} loading="lazy" decoding="async" /></div>
+                <div className="journal-cover"><img src={journal.cover.src} alt={journal.cover.alt} width={journal.cover.width} height={journal.cover.height} style={journal.cover.position ? { objectPosition: journal.cover.position } : undefined} loading="lazy" decoding="async" /></div>
                 <div className="journal-body">
-                  <div className="journal-meta"><span>{en ? 'GBAMUN · WECHAT' : 'GBAMUN 湾区模联 · 公众号'}</span><time dateTime={journal.date}>{journal.date.replace(/-/g, '.')}</time></div>
+                  <div className="journal-meta"><span>{en ? 'GBAMUN · WECHAT' : 'GBAMUN 湾区模联 · 公众号'}</span>{journal.date && <time dateTime={journal.date}>{journal.date.replace(/-/g, '.')}</time>}</div>
                   <h3 lang="zh-CN">{journal.title}</h3>
                   <span className="journal-read">{en ? 'Read on WeChat' : '阅读公众号原文'}<ArrowUpRight size={18} aria-hidden="true" /></span>
                 </div>
